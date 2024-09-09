@@ -23,13 +23,19 @@ Welcome to **Infocusp Projects CLI**, a powerful tool to help you rapidly scaffo
    cd infocusp-projects-cli
    ```
 
-3. Build the CLI tool:
+3. Fetch the required Go dependencies:
+
+   ```bash
+   go get
+   ```
+
+4. Build the CLI tool:
 
    ```bash
    go build -o infocusp
    ```
 
-4. Add the binary to your system's PATH (optional but recommended):
+5. (Optional) Add the binary to your system's PATH:
    ```bash
    sudo mv infocusp /usr/local/bin/
    ```
@@ -116,7 +122,3 @@ We welcome contributions to improve this CLI! Feel free to submit issues and pul
 ## 📄 License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
----
-
-Feel free to adjust the details like the repository URL or licensing information based on your project specifics.
