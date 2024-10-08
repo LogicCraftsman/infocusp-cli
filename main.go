@@ -11,11 +11,12 @@ import (
 // It also provides customization options like Tailwind CSS, TypeScript, linting, testing frameworks, and Docker.
 //
 // Usage:
-//   Run `infocusp` followed by a command to create a project skeleton.
-//   Example commands:
-//   - infocusp create-react-app: Create a React app with optional features like Tailwind CSS and TypeScript.
-//   - infocusp create-flask-skeleton: Create a basic Flask project structure.
-//   - infocusp create-fastapi-skeleton: Create a basic FastAPI project structure with optional testing and Google project settings.
+//
+//	Run `infocusp` followed by a command to create a project skeleton.
+//	Example commands:
+//	- infocusp create-react-app: Create a React app with optional features like Tailwind CSS and TypeScript.
+//	- infocusp create-flask-skeleton: Create a basic Flask project structure.
+//	- infocusp create-fastapi-skeleton: Create a basic FastAPI project structure with optional testing and Google project settings.
 //
 // Features:
 //   - Generate skeletons for popular frameworks.
@@ -25,7 +26,7 @@ func main() {
 	// rootCmd defines the root command for the Infocusp Projects CLI.
 	// It provides a brief description of the CLI and the available features.
 	var rootCmd = &cobra.Command{
-		Use:   "infocusp",
+		Use: "infocusp",
 		Short: `Welcome to Infocusp Projects CLI!
 This powerful and intuitive tool helps you quickly bootstrap skeletons for different tech stacks, 
 create demo projects, and streamline development workflows.
@@ -52,6 +53,9 @@ Happy Coding! 😎
 
 	// Add command for creating a FastAPI skeleton project.
 	rootCmd.AddCommand(commands.CreateFastAPISkeletonCmd())
+
+	// Add command for cloning from a list of repositories
+	rootCmd.AddCommand(commands.CloneRepoCmd())
 
 	// Execute the root command to start the CLI.
 	// This will listen for any subcommands (such as 'create-react-app', 'create-flask-skeleton', etc.)
